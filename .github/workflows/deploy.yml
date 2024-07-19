@@ -50,6 +50,7 @@ jobs:
           subject-digest: ${{ steps.push.outputs.digest }}
           push-to-registry: true  
   deploy:
+    needs: push_to_registry 
     name: Deploy
     runs-on: ubuntu-latest
     steps:
@@ -63,6 +64,7 @@ jobs:
           port: ${{ secrets.TOKYO_SSH_PORT }}
           username: ${{ secrets.TOKYO_SSH_NAME }}
           key: ${{ secrets.TOKYO_SSH_KEY }}
+          envs: GITHUB_USERNAME, PASSWORD
           script: |
             cd /usr/local/apps/website
             docker login -u $GITHUB_USERNAME -p $PASSWORD ghcr.io
