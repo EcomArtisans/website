@@ -35,4 +35,4 @@ COPY --from=installer --chown=nextjs:nodejs /app/public ./public
 
 EXPOSE 3000
 
-CMD node app/server.js
+CMD node server.js
