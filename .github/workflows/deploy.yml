@@ -24,10 +24,10 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Extract metadata (tags, labels) for Docker
-         id: meta
-         uses: docker/metadata-action@v5
-         with:
-           images: EcomArtisans/website
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: EcomArtisans/website
       - name: Build and push Docker image
         id: push
         uses: docker/build-push-action@v6
