@@ -67,7 +67,7 @@ jobs:
         with:
           host: ${{ secrets.TOKYO_SSH_IP }}
           port: ${{ secrets.TOKYO_SSH_PORT }}
-          username: ${{ secrets.TOKYO_SSH_NAME }}
+          username: ${{ secrets.TOKYO_SSH_USER}}
           key: ${{ secrets.TOKYO_SSH_KEY }}
           envs: GITHUB_USERNAME, PASSWORD
           script: |
