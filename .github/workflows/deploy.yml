@@ -1,5 +1,5 @@
 name: Publish EcomArtisans Site Docker image 
- on:
+on:
   release:
     types: [published] 
 
