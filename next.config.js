@@ -2,6 +2,7 @@ const SITE = require('./src/config.js').SITE;
 
 /** @type {import('next').NextConfig} */
 module.exports = {
+  output: 'standalone',
   reactStrictMode: true,
 
   trailingSlash: SITE.trailingSlash,
@@ -20,5 +21,5 @@ module.exports = {
         hostname: 'source.unsplash.com',
       },
     ],
-  }
+  },
 };

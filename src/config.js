@@ -1,7 +1,7 @@
 module.exports.SITE = {
-  name: 'TailNext',
+  name: 'EcomArtisans',
 
-  origin: 'https://tailnext.vercel.app',
+  origin: 'https://www.ecomartisans.com',
   basePathname: '/',
   trailingSlash: false,
 
