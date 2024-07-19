@@ -13,7 +13,6 @@ RUN corepack prepare pnpm@${PNPM_VERSION} --activate
 WORKDIR /app
 
 # First install the dependencies (as they change less often)
-COPY .gitignore .gitignore
 RUN pnpm install --frozen-lockfile
 RUN pnpm build 
 
